@@ -1,0 +1,9 @@
+{
+  "name": "five-member-council",
+  "version": "1.0.0",
+  "description": "Ask five advisors to debate a dilemma and help you decide what to do next.",
+  "author": {
+    "name": "keirimomiji"
+  },
+  "displayName": "Five-Member Council"
+}

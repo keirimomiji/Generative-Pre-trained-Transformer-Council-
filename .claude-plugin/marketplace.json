@@ -1,0 +1,13 @@
+{
+  "name": "five-member-council",
+  "owner": {
+    "name": "keirimomiji"
+  },
+  "plugins": [
+    {
+      "name": "five-member-council",
+      "source": "./plugins/five-member-council"
+    }
+  ],
+  "description": "The Five-Member Council decision-making plugin."
+}

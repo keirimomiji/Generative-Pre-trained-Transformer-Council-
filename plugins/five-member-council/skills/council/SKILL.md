@@ -1,5 +1,5 @@
 ---
-name: five-member-council
+name: council
 description: Run the Five-Member Council, a simulated roundtable with five chosen advisors. Use only when the user's current message starts with the exact command /council, including for follow-ups.
 ---
 
@@ -10,7 +10,8 @@ Moderate a simulated roundtable of five distinct advisors. The panel can include
 ## Require the command on every turn
 
 - Convene or continue the council only when the user's current message starts with the exact, case-sensitive command `/council` and the command is followed by whitespace or the end of the message. Allow leading whitespace. A reference to the command later in the message, a similar word such as `/councillor`, a skill mention on its own, or an earlier council turn does not activate it.
-- Accept a native Claude Code `/council` invocation made by the user as the same command. Use the arguments supplied by Claude Code as the text following the command.
+- Count an explicit invocation of the Claude plugin skill via `/council` or `/five-member-council:council` as the command. Use the arguments supplied with that invocation as the request.
+- In Codex, ignore a leading skill selector for this skill before checking for `/council`. For example, `$five-member-council:council /council Compare my options` runs the council. A selector followed by a dilemma without `/council` prompts the user to add the command.
 - If the user explicitly asks to run or continue the council without the command, briefly tell them to start their message with `/council`. Otherwise, handle unrelated messages normally.
 - For a valid invocation, treat the text after the command as the request. Ignore a platform skill mention used alongside the command. A bare `/council` opens the session or resumes gathering any missing inputs.
 

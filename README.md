@@ -1,67 +1,59 @@
 # Generative-Pre-trained-Transformer-Council-
 A /council skill for ChatGPT, Claude, and Codex. Pick five advisors to debate your dilemma, weigh the trade-offs, and suggest a next step.
 
-## Use it
+## Install the plugin
 
-Send `/council` on its own to get started, then prefix your reply with `/council`. You can also supply everything in one message.
+### Claude app or Cowork
 
-> /council My Roblox game could launch next week with a small map, or I could delay a month to add more features. My advisors are Jane Jacobs, Grace Hopper, Hayao Miyazaki, Leslie Knope, and an indie game producer.
+1. Open **Customize → Plugins → Add → Add marketplace**.
+2. Choose **Add from a repository** and enter this URL.
 
-Start follow-ups with `/council` as well. For example, `/council Ask the same panel how a two-week delay would change their advice.`
+   ```text
+   https://github.com/keirimomiji/Generative-Pre-trained-Transformer-Council-
+   ```
 
-## Install
+3. Add the **Five-Member Council** plugin from the new marketplace. Start a new chat and type `/council` or select the council skill from the slash menu.
 
-The shared instructions live in [five-member-council/SKILL.md](five-member-council/SKILL.md). Run these commands from the repository root.
+[Claude plugin setup](https://support.claude.com/en/articles/13837440-use-plugins-in-claude)
 
 ### Claude Code
 
-Install a version named `council` that Claude Code can invoke only through the user's slash command.
+Run these commands **inside Claude Code**.
 
-```sh
-mkdir -p ~/.claude/skills/council
-awk '
-  /^name: five-member-council$/ {
-    print "name: council"
-    print "disable-model-invocation: true"
-    next
-  }
-  { print }
-' five-member-council/SKILL.md > ~/.claude/skills/council/SKILL.md
+```text
+/plugin marketplace add keirimomiji/Generative-Pre-trained-Transformer-Council-
+/plugin install five-member-council@five-member-council
 ```
 
-Type `/council` in Claude Code. For a single project, use `.claude/skills/council/SKILL.md` as the destination. [Claude Code skill docs](https://code.claude.com/docs/en/skills)
+Start a new session and type `/council`. If another command already uses that name, use `/five-member-council:council`.
 
-### Codex
+[Claude Code plugin setup](https://code.claude.com/docs/en/plugin-marketplaces)
 
-```sh
-mkdir -p ~/.agents/skills
-cp -R five-member-council ~/.agents/skills/
-```
+### Codex CLI
 
-Send the `/council` prefix as message text. Codex's native skill selector uses `$` or `/skills`, so some clients may reserve the leading slash for their own command menu. If the interactive CLI won't submit it, pass the prompt directly.
+Run these commands in your **terminal**.
 
 ```sh
-codex exec '/council'
+codex plugin marketplace add keirimomiji/Generative-Pre-trained-Transformer-Council-
+codex plugin add five-member-council@five-member-council
 ```
 
-To continue the same CLI session, replace `SESSION_ID` with the session identifier.
+You can also open `/plugins` in Codex, select **Add Marketplace**, enter the same GitHub repository, and install **Five-Member Council**.
 
-```sh
-codex exec resume SESSION_ID '/council My dilemma is ...'
-```
+Start a new Codex session. Type `$` and select `five-member-council:council`, then begin your message with `/council`. For example, enter `$five-member-council:council /council` to start.
 
-For a single repository, put the skill folder under that repository's `.agents/skills/`. [OpenAI skill docs](https://learn.chatgpt.com/docs/build-skills)
+[Codex plugin commands](https://learn.chatgpt.com/docs/developer-commands)
 
-### Claude on the web
+## Use the council
 
-Create an upload archive with the shared skill folder at its top level.
+Send `/council` by itself to get started or include your dilemma and five advisors in one message.
 
-```sh
-zip -r five-member-council.zip five-member-council/
-```
+> /council My Roblox game could launch next week with a small map, or I could delay a month to add more features. My advisors are Jane Jacobs, Grace Hopper, Hayao Miyazaki, Leslie Knope, and an indie game producer.
 
-In Claude, go to **Customize → Skills → + → Create skill → Upload a skill**. Upload the archive, enable the skill, and start your message with `/council`. [Claude custom skills guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
+Start follow-ups with `/council` as well. The same panel can weigh in again.
 
-### ChatGPT
+## Standalone skill for ChatGPT
 
-If Skills is available in your workspace, go to **Plugins → Skills → Create → Upload from your computer** and follow the upload prompts. Start your message with `/council`. You can also attach the skill using `@` in the same message. [ChatGPT skills guide](https://help.openai.com/en/articles/20001066-skills-in-chatgpt/)
+Where ChatGPT offers skill uploads, zip the [council skill folder](plugins/five-member-council/skills/council/) with `council/` at the top level of the archive. Open **Plugins → Skills → Create → Upload from your computer**. Select the skill with `@` in a chat and start your message with `/council`.
+
+[ChatGPT skills setup](https://help.openai.com/en/articles/20001066-skills-in-chatgpt/)

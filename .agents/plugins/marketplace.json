@@ -1,0 +1,20 @@
+{
+  "name": "five-member-council",
+  "interface": {
+    "displayName": "Five-Member Council"
+  },
+  "plugins": [
+    {
+      "name": "five-member-council",
+      "source": {
+        "source": "local",
+        "path": "./plugins/five-member-council"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
