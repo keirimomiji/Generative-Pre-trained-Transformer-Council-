@@ -1,0 +1,4 @@
+interface:
+  display_name: "Five-Member Council"
+  short_description: "Debate a dilemma with five chosen advisors"
+  default_prompt: "/council $five-member-council"
