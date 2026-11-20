@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.pinimg.com/originals/0e/f8/0d/0ef80db57e264a915177edb5f8179ebb.gif" alt="Five-Member Council animated banner">
+</p>
+
 # Generative-Pre-trained-Transformer-Council-
 A /council skill for ChatGPT, Claude, and Codex. Five built-in advisor roles debate your dilemma, vote on the options, and suggest a next step.
 
@@ -43,6 +47,34 @@ You can also open `/plugins` in Codex, select **Add Marketplace**, enter the sam
 Start a new Codex session. Type `$` and select `five-member-council:council`, then begin your message with `/council`. For example, enter `$five-member-council:council /council` to start.
 
 [Codex plugin commands](https://learn.chatgpt.com/docs/developer-commands)
+
+## Update the plugin
+
+Send `/council version` to see the version loaded in your session. On a local Claude Code or Codex installation, `/council update` refreshes the marketplace and updates Five-Member Council. In Codex, select the council skill first as shown above.
+
+### Upgrade from v1.1.0 or earlier
+
+The new chat command is available from **v1.2.0**. If your installed version is older, use the native plugin manager once.
+
+**Claude Code terminal**
+
+```sh
+claude plugin marketplace update five-member-council
+claude plugin update five-member-council@five-member-council
+```
+
+Run `/reload-plugins` in Claude Code or start a new session.
+
+**Codex terminal**
+
+```sh
+codex plugin marketplace upgrade five-member-council
+codex plugin add five-member-council@five-member-council
+```
+
+Start a new Codex session. These terminal commands also work if Python 3 is unavailable for the bundled updater.
+
+For Claude on the web or in Cowork, manage the marketplace under **Customize → Plugins**. For ChatGPT, download the latest skill folder and upload it again.
 
 ## Use the council
 

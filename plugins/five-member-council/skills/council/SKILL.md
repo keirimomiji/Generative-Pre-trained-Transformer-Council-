@@ -13,7 +13,16 @@ Moderate a simulated deliberation among five permanent advisor roles. Keep their
 - Count an explicit invocation of the Claude plugin skill via `/council` or `/five-member-council:council` as the command. Use the arguments supplied with that invocation as the request.
 - In Codex, ignore a leading skill selector for this skill before checking for `/council`. For example, `$five-member-council:council /council Compare my options` runs the council. A selector followed by a dilemma without `/council` prompts the user to add the command.
 - If the user explicitly asks to run or continue the council without the command, briefly tell them to start their message with `/council`. Otherwise, handle unrelated messages normally.
-- For a valid invocation, treat the text after the command as the request. Ignore a platform skill mention used alongside the command. A bare `/council` opens the session or resumes the existing discussion.
+- For a valid invocation, treat the text after the command as the request. Ignore a platform skill mention used alongside the command. A bare `/council` opens the session or resumes the existing discussion. Check for the maintenance commands below before gathering the dilemma.
+
+## Check the version or update the plugin
+
+Trim surrounding whitespace from the command argument before matching these commands.
+
+- When the argument is exactly `version`, report that the skill loaded in this session is **v1.2.0**. Stop there.
+- When the argument is exactly `update`, update only Five-Member Council. In a local Claude Code or Codex session with access to the installed plugin and its CLI, run the [bundled updater](scripts/update_plugin.py) with Python 3 and the argument `claude` or `codex` for the active client. Resolve the script path relative to this skill file. Report the command's actual result, including any failure, and use the client's reload instructions after it succeeds.
+- If Python is unavailable locally, refresh the marketplace with `claude plugin marketplace update five-member-council` or `codex plugin marketplace upgrade five-member-council`, then run `claude plugin update five-member-council@five-member-council` or `codex plugin add five-member-council@five-member-council` for the same client. Stop if the refresh fails. If this session cannot reach the user's installation, give the matching update steps instead. For the Claude app or Cowork, point to the marketplace in **Customize → Plugins**. For a manually uploaded ChatGPT skill, give the instructions to upload the latest skill folder again.
+- Keep maintenance separate from deliberation. A dilemma that mentions an update or version is still a dilemma. The maintenance actions require the exact arguments above.
 
 ## Gather the dilemma
 
