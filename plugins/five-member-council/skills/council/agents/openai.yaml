@@ -1,4 +1,4 @@
 interface:
   display_name: "Five-Member Council"
-  short_description: "Debate a dilemma with five chosen advisors"
+  short_description: "Debate a dilemma with five built-in advisors"
   default_prompt: "/council"

@@ -1,5 +1,5 @@
 # Generative-Pre-trained-Transformer-Council-
-A /council skill for ChatGPT, Claude, and Codex. Pick five advisors to debate your dilemma, weigh the trade-offs, and suggest a next step.
+A /council skill for ChatGPT, Claude, and Codex. Five built-in advisor roles debate your dilemma, vote on the options, and suggest a next step.
 
 ## Install the plugin
 
@@ -46,11 +46,57 @@ Start a new Codex session. Type `$` and select `five-member-council:council`, th
 
 ## Use the council
 
-Send `/council` by itself to get started or include your dilemma and five advisors in one message.
+Start with `/council` and describe your dilemma. Send `/council` alone if you'd like the plugin to ask for it. Use the same prefix on follow-ups.
 
-> /council My Roblox game could launch next week with a small map, or I could delay a month to add more features. My advisors are Jane Jacobs, Grace Hopper, Hayao Miyazaki, Leslie Knope, and an indie game producer.
+| Advisor | What they bring |
+| --- | --- |
+| The Philosopher | Ethics, fairness, and long-term consequences |
+| The Strategist | Planning, incentives, and practical risks |
+| The Scientist | Evidence, uncertainty, and ways to test assumptions |
+| The Visionary | Unconventional options and new possibilities |
+| The Devil's Advocate | The strongest objection and what could go wrong |
 
-Start follow-ups with `/council` as well. The same panel can weigh in again.
+## Example
+
+> /council Should I release my Roblox ship-building game next week with one small map, or wait a month to build a bigger one? I have limited time and a small testing group.
+
+### Opening Statements
+
+- **The Philosopher** supports a beta if players know what they're signing up for. Their first session should deliver the ship-building experience the game promises.
+- **The Strategist** favors releasing next week. A small trial gives you time to fix the problems you actually see.
+- **The Scientist** wants to watch newcomers build and launch a ship without help before deciding how widely to release.
+- **The Visionary** proposes one distinctive challenge on the small map so players have a reason to try different ship designs.
+- **The Devil's Advocate** favors waiting. A good session with experienced testers could hide how confusing the game feels to a first-time player.
+
+### Cross-Examination
+
+**The Devil's Advocate to The Strategist.** If your usual testers already know how to build ships, what would their success tell you about a public launch?
+
+**The Philosopher to The Visionary.** Can a player reach your signature challenge before they need someone to explain the controls?
+
+### Rebuttals
+
+**The Strategist** changes the proposal from a public beta to an invite-only test that includes players new to the genre.
+
+**The Visionary** makes launching a starter ship the first step of the challenge. **The Devil's Advocate** keeps their objection. Finding a few new testers still leaves little margin to fix what they uncover before next week.
+
+### Final Vote
+
+| Advisor | Vote | Reason |
+| --- | --- | --- |
+| The Philosopher | Invite-only beta next week | Clear expectations make an early trial fair to players. |
+| The Strategist | Invite-only beta next week | The limited rollout is easy to pause. |
+| The Scientist | Invite-only beta next week | First-time players can show where onboarding breaks. |
+| The Visionary | Invite-only beta next week | One challenge is enough to test whether ship design feels rewarding. |
+| The Devil's Advocate | Wait a month | More time to fix onboarding lowers the risk of losing the first group of players. |
+
+**Tally — 4 invite-only beta next week, 1 wait a month.**
+
+### Council Verdict
+
+Run an invite-only beta next week with one small map and recruit a few players who have never seen the game. Watch where they struggle to build and launch their first ship. If they repeatedly stall at the same step, fix it and test again before opening the beta. The dissent is that your group may be too small to spot every rough edge.
+
+*What must a first-time player experience before their feedback tells you whether building ships is fun?*
 
 ## Standalone skill for ChatGPT
 

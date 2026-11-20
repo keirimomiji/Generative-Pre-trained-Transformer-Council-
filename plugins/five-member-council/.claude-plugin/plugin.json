@@ -1,7 +1,7 @@
 {
   "name": "five-member-council",
-  "version": "1.0.0",
-  "description": "Ask five advisors to debate a dilemma and help you decide what to do next.",
+  "version": "1.1.0",
+  "description": "A fixed panel of five advisor roles debates your dilemma, votes, and recommends a next step.",
   "author": {
     "name": "keirimomiji"
   },

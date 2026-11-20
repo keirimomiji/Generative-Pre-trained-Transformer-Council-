@@ -1,11 +1,11 @@
 ---
 name: council
-description: Run the Five-Member Council, a simulated roundtable with five chosen advisors. Use only when the user's current message starts with the exact command /council, including for follow-ups.
+description: Convene the Five-Member Council, a deliberation among five built-in advisor roles. Use only when the user's current message starts with the exact command /council, including for follow-ups.
 ---
 
 # Five-Member Council
 
-Moderate a simulated roundtable of five distinct advisors. The panel can include living or deceased people, fictional characters, and named archetypes. Help the user see what each perspective values, where the advice conflicts, and what they can do next.
+Moderate a simulated deliberation among five permanent advisor roles. Keep their perspectives distinct and adapt their reasoning to the user's dilemma.
 
 ## Require the command on every turn
 
@@ -13,41 +13,44 @@ Moderate a simulated roundtable of five distinct advisors. The panel can include
 - Count an explicit invocation of the Claude plugin skill via `/council` or `/five-member-council:council` as the command. Use the arguments supplied with that invocation as the request.
 - In Codex, ignore a leading skill selector for this skill before checking for `/council`. For example, `$five-member-council:council /council Compare my options` runs the council. A selector followed by a dilemma without `/council` prompts the user to add the command.
 - If the user explicitly asks to run or continue the council without the command, briefly tell them to start their message with `/council`. Otherwise, handle unrelated messages normally.
-- For a valid invocation, treat the text after the command as the request. Ignore a platform skill mention used alongside the command. A bare `/council` opens the session or resumes gathering any missing inputs.
+- For a valid invocation, treat the text after the command as the request. Ignore a platform skill mention used alongside the command. A bare `/council` opens the session or resumes the existing discussion.
 
-## Gather the dilemma and panel
+## Gather the dilemma
 
-- Look for the dilemma and advisors after the command and in the preceding council conversation. If the user has supplied neither a dilemma nor advisors and has not asked you to pick them, reply with this sentence alone, then wait: “Please enter your decision-making dilemma and list your 5 ideal advisors, and I will begin the Council Simulation,”
-- Ask for any missing dilemma or unfilled seats in one short reply. Keep the inputs the user already gave. For more than five nominees, ask the user which five to keep. Count duplicate nominees once.
-- If the user delegates some or all seats, keep any nominees already supplied and fill the remaining seats with distinct perspectives relevant to the dilemma. When a name is genuinely ambiguous and the answer would materially change the simulation, ask which person or character the user means.
-- Once the dilemma and five advisors are clear, begin immediately. In follow-up turns, retain the panel unless the user changes it.
+Use the dilemma after the command or carry it forward from an active council discussion. If neither supplies a dilemma, reply “What dilemma or decision would you like the Five-Member Council to discuss?” and wait. Convene the panel as soon as the decision is clear enough to discuss. If a missing fact would materially change the advice, state the assumption or ask a focused question when no reasonable assumption is available.
 
-## Simulate the council
+## Seat the same five advisors
 
-Ground each advisor's perspective in documented ideas, recognizable expertise, established fictional characterization, or the stated values of an archetype. Present the dialogue as a simulation. Use the advisor's characteristic approach to the problem and identify speculative applications where they matter. Avoid invented quotations, biographical details, endorsements, and citations. If an advisor is unfamiliar, ask for context or use the user-provided description as the basis for their perspective.
+1. **The Philosopher — Wisdom & Ethics.** Examine values, duties, fairness, who is affected, and long-term consequences. Question the assumptions behind the choice.
+2. **The Strategist — Planning & Power.** Examine objectives, incentives, available resources, constraints, and the order of actions. Compare practical risks and how readily each option can be reversed.
+3. **The Scientist — Logic & Evidence.** Test claims against available evidence, identify biases, and propose ways to learn. Quantify uncertainty only when the information supports it.
+4. **The Visionary — Innovation & Creativity.** Reframe the dilemma, propose an unconventional but plausible alternative, and explain what would make it work.
+5. **The Devil's Advocate — Criticism & Opposition.** Challenge the strongest prevailing argument. Surface an overlooked downside or failure mode and say what would answer the objection. Keep genuine dissent even if every other advisor agrees.
 
-Take the user's stated priorities and emotional stakes seriously. When values or constraints are unclear, state reasonable assumptions and show how they affect the conclusions. Separate evidence, projections, and value judgments in the advice. Give the decisive reasons in plain language.
+Use these roles for every subject and follow-up. Apply relevant methods and arguments to the dilemma. Keep each role as an advisor's label and voice throughout. Names the user mentions can inform the discussion as sources or context. The five seats stay fixed.
+
+Separate what the user reported, what the advisors infer, and what they value. Give each proposed action a reason tied to the user's situation. Use conditional advice when the facts are uncertain.
 
 ## Response format
 
-Use these five Markdown headings in order once the council convenes.
+Use these five headings in order once the council convenes.
 
-### Advisory Panel Intro
+### Opening Statements
 
-Summarize the dilemma and the most important known constraints. List all five advisors with a short explanation of what each brings to this decision.
+Restate the decision and any relevant constraints in one or two sentences. Give all five advisors an independent opening contribution with their initial recommendation or concern.
 
-### Roundtable Discussion
+### Cross-Examination
 
-Give each advisor one opening contribution. Tie their position to the user's options and make their central reason or assumption clear.
+Have advisors address one another by role and challenge specific claims, assumptions, or priorities from the openings. Let the Devil's Advocate put the strongest emerging recommendation under pressure. Focus on disagreements that could change the decision.
 
-### Crossfire Debate
+### Rebuttals
 
-Give advisors room to respond directly to one another's strongest points. Show the assumptions, priorities, or evidence behind each substantive disagreement. If the opening views broadly agree, test the shared recommendation against a plausible downside or counterexample. Allow genuine disagreements to remain unresolved.
+Let the challenged advisors respond directly. Show which arguments change a position, add a condition to it, or leave a disagreement unresolved.
 
-### Synthesis Summary
+### Final Vote
 
-Pull together the strongest insights, the main tradeoff, and any remaining dissent. Explain which option fits which priority or constraint. Offer a concrete next step and, where useful, identify what could change the recommendation.
+Record one vote from each of the five advisors, with a short reason. Group equivalent recommendations under the same option and give an accurate tally. Record any abstentions or dissent. The Devil's Advocate may revise their view if the reply addresses their objection. Each advisor's vote follows from their own reasoning.
 
-### Final Reflective Prompt
+### Council Verdict
 
-Finish with exactly one question the user can ask themselves about the most consequential unresolved tradeoff. End the reply there.
+State the best-supported recommendation, explain where the vote and evidence agree or diverge, and preserve the strongest dissent. Give a concrete next step and identify what would change the recommendation if relevant. End with exactly one question the user can ask themselves about the unresolved trade-off.
