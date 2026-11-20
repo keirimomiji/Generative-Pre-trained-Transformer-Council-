@@ -88,47 +88,81 @@ Start with `/council` and describe your dilemma. Send `/council` alone if you'd 
 | The Visionary | Unconventional options and new possibilities |
 | The Devil's Advocate | The strongest objection and what could go wrong |
 
-## Example
+## Worked example
 
 > /council Should I release my Roblox ship-building game next week with one small map, or wait a month to build a bigger one? I have limited time and a small testing group.
 
 ### Opening Statements
 
-- **The Philosopher** supports a beta if players know what they're signing up for. Their first session should deliver the ship-building experience the game promises.
-- **The Strategist** favors releasing next week. A small trial gives you time to fix the problems you actually see.
-- **The Scientist** wants to watch newcomers build and launch a ship without help before deciding how widely to release.
-- **The Visionary** proposes one distinctive challenge on the small map so players have a reason to try different ship designs.
-- **The Devil's Advocate** favors waiting. A good session with experienced testers could hide how confusing the game feels to a first-time player.
+You have one small map, a small test group, and limited time. The decision depends on what the current map can teach you about the building loop and what another month of development would buy.
+
+**The Philosopher.** I'd invite players next week and hold off on a public release. If you promise a game about designing ships, the first route should let players see a consequence of their design. I'd accept a short first session if players knew what they were signing up for and had a fair shot at making that discovery.
+
+**The Strategist.** I'd open a limited beta next week. A month spent adding routes is a bad bet if new players can't get their first ship out of the dock. My bet depends on attracting a few genuine newcomers and having time to watch them. Without that, the launch gives us feedback we could already get from friends.
+
+**The Scientist.** I'd run an observed playtest before deciding. Finishing a voyage could mean the ship editor is easy, the route is forgiving, or a friend coached the player through it. I want to see where an uncoached player hesitates and whether they have a reason to change their ship after sailing.
+
+**The Visionary.** I'd keep the map and make one voyage reward two credible builds. A large hull could carry more cargo on the longer route, while a nimble hull could take a narrow shortcut. This only earns its place if both approaches work and a new player can understand their trade-off.
+
+**The Devil's Advocate.** I'd postpone the public release and build a second challenge. Even if the first route supports two builds, one route might teach players a single trick. The case for spending another month depends on whether you can add a genuinely different demand on the same building system.
 
 ### Cross-Examination
 
-**The Devil's Advocate to The Strategist.** If your usual testers already know how to build ships, what would their success tell you about a public launch?
+#### What would public access teach you?
 
-**The Philosopher to The Visionary.** Can a player reach your signature challenge before they need someone to explain the controls?
+**The Devil's Advocate → The Strategist.** You say public access buys learning. What can you learn that you couldn't get by inviting the same number of strangers and watching them? Closing a beta won't undo someone's first impression.
+
+**The Strategist.** A public session includes players who pick the game themselves. An invitation gives people a reason to stick around when they get confused. That's worth testing once we know they can get out of the dock.
+
+**The Scientist.** Then separate the two questions. Watch uncoached invitees to find where they get stuck. Use a public beta to learn whether people who arrived on their own keep playing. If you open access while the first question is unresolved, early departures won't tell you whether the premise or the controls lost them.
+
+#### Would the map reward different ships?
+
+**The Philosopher → The Visionary.** What if the shortcut turns out to be the obvious best choice? You'd be asking people to experiment with a decision the map already made for them.
+
+**The Visionary.** Make both builds worth running. The cargo ship should deliver more per trip, and the nimble ship should take less time. Check that neither wins on both measures before bringing in testers.
+
+**The Philosopher.** That's a balance check. I also want to know whether players can see why a design did better. If the shortcut looks like a gap anybody can fit through, a player who gets wedged may blame the steering. Ask what they'd change and why before explaining the intended trade-off.
+
+#### What would another month buy?
+
+**The Strategist → The Devil's Advocate.** What would you put on the second map that justifies a month of work? An extra harbor still leaves the same building decisions.
+
+**The Devil's Advocate.** Give players a reason to retire a ship that already worked. If the first delivery rewards capacity, a second one could demand tight turns. I'd consider adding that to the existing map. My objection is that we're betting on repeat building before we've seen a player face a new problem.
+
+**The Strategist.** That changes the scope. If one extra delivery can expose the gap, I'd spend an evening prototyping it before committing a month to a second map.
 
 ### Rebuttals
 
-**The Strategist** changes the proposal from a public beta to an invite-only test that includes players new to the genre.
+**The Strategist** drops the immediate public launch after the Scientist separates onboarding from public interest. Next week's test should show where an uncoached player gets stuck before the team tries to measure voluntary return.
 
-**The Visionary** makes launching a starter ship the first step of the challenge. **The Devil's Advocate** keeps their objection. Finding a few new testers still leaves little margin to fix what they uncover before next week.
+**The Visionary** accepts the Philosopher's point that a balanced route can still be hard to read. Testers should explain what their hull did for them and show what they'd change before anyone explains the route.
+
+**The Devil's Advocate** drops the demand for a bigger map but keeps a higher bar for public release. They want newcomers to carry something they learned on the first trip into a second problem. The Scientist would open a limited beta sooner if players already choose to rebuild on the current route.
 
 ### Final Vote
 
 | Advisor | Vote | Reason |
 | --- | --- | --- |
-| The Philosopher | Invite-only beta next week | Clear expectations make an early trial fair to players. |
-| The Strategist | Invite-only beta next week | The limited rollout is easy to pause. |
-| The Scientist | Invite-only beta next week | First-time players can show where onboarding breaks. |
-| The Visionary | Invite-only beta next week | One challenge is enough to test whether ship design feels rewarding. |
-| The Devil's Advocate | Wait a month | More time to fix onboarding lowers the risk of losing the first group of players. |
+| The Philosopher | Playtest next week, then open a limited beta if it passes | Players should be able to explain a consequence of their design. |
+| The Strategist | Playtest next week, then open a limited beta if it passes | A short test can show where development time would matter most. |
+| The Scientist | Playtest next week, then open a limited beta if it passes | Observe first-time players before using public behavior to judge the game. |
+| The Visionary | Playtest next week, then open a limited beta if it passes | The existing map can reveal a design trade-off if both builds work. |
+| The Devil's Advocate | Delay public access until a second challenge is tested | A single route may reward one build and give players little reason to return. |
 
-**Tally — 4 invite-only beta next week, 1 wait a month.**
+**Tally — 4 for a playtest with a conditional public beta, 1 for testing a second challenge before public access.**
 
 ### Council Verdict
 
-Run an invite-only beta next week with one small map and recruit a few players who have never seen the game. Watch where they struggle to build and launch their first ship. If they repeatedly stall at the same step, fix it and test again before opening the beta. The dissent is that your group may be too small to spot every rough edge.
+Keep next week as the playtest date. Invite a few people who have never seen the build, ask them to complete one delivery, and watch without coaching. Record where they get stuck and whether they start modifying their ship on their own.
 
-*What must a first-time player experience before their feedback tells you whether building ships is fun?*
+If several players hit the same blocker, fix it and repeat the test. If they finish but see no reason to rebuild, prototype a second delivery on the same map with a different ship requirement. If newcomers can complete the loop and make a deliberate redesign for another run, open a limited public beta to see whether people who discover the game on their own also stick with it. The playtest can expose design problems, while the Devil's Advocate's concern about return visits stays open.
+
+*What would make a player change a ship that already got them safely back to port?*
+
+## Another prompt to try
+
+> /council Our volunteer repair café has enough money for either a second monthly event or one shared toolkit that would speed up repairs. We already turn people away, and only four volunteers can diagnose electronics. Which should we fund, and what would prove we made the right choice?
 
 ## Standalone skill for ChatGPT
 

@@ -19,7 +19,7 @@ Moderate a simulated deliberation among five permanent advisor roles. Keep their
 
 Trim surrounding whitespace from the command argument before matching these commands.
 
-- When the argument is exactly `version`, report that the skill loaded in this session is **v1.2.0**. Stop there.
+- When the argument is exactly `version`, report that the skill loaded in this session is **v1.3.0**. Stop there.
 - When the argument is exactly `update`, update only Five-Member Council. In a local Claude Code or Codex session with access to the installed plugin and its CLI, run the [bundled updater](scripts/update_plugin.py) with Python 3 and the argument `claude` or `codex` for the active client. Resolve the script path relative to this skill file. Report the command's actual result, including any failure, and use the client's reload instructions after it succeeds.
 - If Python is unavailable locally, refresh the marketplace with `claude plugin marketplace update five-member-council` or `codex plugin marketplace upgrade five-member-council`, then run `claude plugin update five-member-council@five-member-council` or `codex plugin add five-member-council@five-member-council` for the same client. Stop if the refresh fails. If this session cannot reach the user's installation, give the matching update steps instead. For the Claude app or Cowork, point to the marketplace in **Customize → Plugins**. For a manually uploaded ChatGPT skill, give the instructions to upload the latest skill folder again.
 - Keep maintenance separate from deliberation. A dilemma that mentions an update or version is still a dilemma. The maintenance actions require the exact arguments above.
@@ -42,19 +42,21 @@ Separate what the user reported, what the advisors infer, and what they value. G
 
 ## Response format
 
-Use these five headings in order once the council convenes.
+Use these five headings in order once the council convenes. For a typical dilemma, aim for roughly 750–1,100 words, with most of the space going to the debate. Go deeper when the decision warrants it and honor requests for a shorter answer. Spend the extra space on competing arguments and evidence that could change the decision.
 
 ### Opening Statements
 
-Restate the decision and any relevant constraints in one or two sentences. Give all five advisors an independent opening contribution with their initial recommendation or concern.
+Restate the decision, constraints, and any pivotal unknowns without settling the verdict. Give each advisor a short paragraph taking a position or stating a condition for one. Have them explain why their option should work here and identify a cost, assumption, or weakness they would have to defend.
 
 ### Cross-Examination
 
-Have advisors address one another by role and challenge specific claims, assumptions, or priorities from the openings. Let the Devil's Advocate put the strongest emerging recommendation under pressure. Focus on disagreements that could change the decision.
+Stage at least three distinct exchanges in direct dialogue, labeled by advisor. In each exchange, one advisor challenges a specific claim, the advisor who made it answers, and the challenger or a third advisor presses that answer. Give every advisor a speaking turn across the exchanges. Have the Devil's Advocate challenge the strongest case for the emerging recommendation.
+
+Pick disputes that could change the decision. Test why the proposed action would produce the result, what else could explain the evidence, what the strongest alternative buys at the same cost, or who bears the downside if an assumption fails. When evidence is missing, identify an observation that would distinguish the competing explanations. Let advisors say what evidence would change their minds.
 
 ### Rebuttals
 
-Let the challenged advisors respond directly. Show which arguments change a position, add a condition to it, or leave a disagreement unresolved.
+Bring the strongest objections to bear on the proposals. Name which challenge led an advisor to withdraw a claim, change a recommendation, or add a concrete condition. For the strongest unresolved disagreement, explain why the dissenter still holds their position and what would resolve it. Agreement can follow from the debate, and disagreements can survive the vote.
 
 ### Final Vote
 
@@ -62,4 +64,4 @@ Record one vote from each of the five advisors, with a short reason. Group equiv
 
 ### Council Verdict
 
-State the best-supported recommendation, explain where the vote and evidence agree or diverge, and preserve the strongest dissent. Give a concrete next step and identify what would change the recommendation if relevant. End with exactly one question the user can ask themselves about the unresolved trade-off.
+State the best-supported recommendation and the trade-off that makes it preferable to the strongest alternative. Explain where the vote and evidence agree or diverge, and preserve the strongest dissent. Give a concrete next step and, when the decision is conditional, say what result would justify proceeding, changing course, or waiting. End with exactly one question the user can ask themselves about the unresolved trade-off.
