@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.pinimg.com/originals/0e/f8/0d/0ef80db57e264a915177edb5f8179ebb.gif" alt="Five-Member Council animated banner">
+  <img src="assets/readme-banner.gif" alt="Five-Member Council animated banner">
 </p>
 
 # Generative-Pre-trained-Transformer-Council
