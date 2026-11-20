@@ -90,79 +90,79 @@ Start with `/council` and describe your dilemma. Send `/council` alone if you'd 
 
 ## Worked example
 
-> /council Should I release my Roblox ship-building game next week with one small map, or wait a month to build a bigger one? I have limited time and a small testing group.
+> /council A small town museum has a grant that would cover either twelve Thursday evening openings or six Saturday pop-up exhibits at three branch libraries. Staff can run only one option. The goal is to reach people who rarely visit the museum. Which should we choose, and how should we tell whether it worked?
 
 ### Opening Statements
 
-You have one small map, a small test group, and limited time. The decision depends on what the current map can teach you about the building loop and what another month of development would buy.
+The two options address different barriers. Evening openings help people who can get to the museum but cannot visit during the day. Library exhibits bring the collection closer to people who may rarely consider visiting at all.
 
-**The Philosopher.** I'd invite players next week and hold off on a public release. If you promise a game about designing ships, the first route should let players see a consequence of their design. I'd accept a short first session if players knew what they were signing up for and had a fair shot at making that discovery.
+**The Philosopher.** I'd take the exhibit to the libraries. You can speak to someone who already uses a branch without asking them to plan a separate trip. That case rests on whether visitors get enough space and time to engage at the branch.
 
-**The Strategist.** I'd open a limited beta next week. A month spent adding routes is a bad bet if new players can't get their first ship out of the dock. My bet depends on attracting a few genuine newcomers and having time to watch them. Without that, the launch gives us feedback we could already get from friends.
+**The Strategist.** I'd add Thursday evenings. The exhibit is already installed, and staff can reuse their opening routine twelve times. If there are enough people waiting for hours that fit their schedules, this is a direct way to reach them. I would check how late they can realistically get to and from the museum.
 
-**The Scientist.** I'd run an observed playtest before deciding. Finishing a voyage could mean the ship editor is easy, the route is forgiving, or a friend coached the player through it. I want to see where an uncoached player hesitates and whether they have a reason to change their ship after sailing.
+**The Scientist.** My vote depends on what the museum means by “reach.” A library visitor who stops at one display might have a worthwhile encounter, and someone who spends forty minutes at the museum might already be a regular. I'd track meaningful encounters with people who rarely visit and collect the same basic information at every event.
 
-**The Visionary.** I'd keep the map and make one voyage reward two credible builds. A large hull could carry more cargo on the longer route, while a nimble hull could take a narrow shortcut. This only earns its place if both approaches work and a new player can understand their trade-off.
+**The Visionary.** I'd use the libraries and build each pop-up around one object and a question locals can answer. For example, show an old photograph of a familiar street and ask what has changed. The idea works only if the branches can offer a place to stop and talk.
 
-**The Devil's Advocate.** I'd postpone the public release and build a second challenge. Even if the first route supports two builds, one route might teach players a single trick. The case for spending another month depends on whether you can add a genuinely different demand on the same building system.
+**The Devil's Advocate.** I'd favor evenings if local groups can bring people who have never been. Library branches may draw plenty of foot traffic, but a busy branch can still be a poor exhibit venue. I want to know how many hours staff will spend transporting, setting up, and supervising the display before calling the pop-ups efficient.
 
 ### Cross-Examination
 
-#### What would public access teach you?
+#### Who would actually come on Thursdays?
 
-**The Devil's Advocate → The Strategist.** You say public access buys learning. What can you learn that you couldn't get by inviting the same number of strangers and watching them? Closing a beta won't undo someone's first impression.
+**The Philosopher → The Strategist.** Opening the building later helps people who already want to go. What gets someone who rarely thinks about the museum through the door after work?
 
-**The Strategist.** A public session includes players who pick the game themselves. An invitation gives people a reason to stick around when they get confused. That's worth testing once we know they can get out of the dock.
+**The Strategist.** Start with neighborhood groups whose members say daytime hours are the barrier. Ask each group when its members could come and whether it would share the opening dates.
 
-**The Scientist.** Then separate the two questions. Watch uncoached invitees to find where they get stuck. Use a public beta to learn whether people who arrived on their own keep playing. If you open access while the first question is unresolved, early departures won't tell you whether the premise or the controls lost them.
+**The Scientist.** Group leaders saying “people would love this” is weak evidence. Ask people at the branches and in those groups what kept them away on their last realistic chance to visit. If distance, transport, or lack of interest comes up more often than hours, your outreach plan is solving a different problem.
 
-#### Would the map reward different ships?
+#### Does a short encounter count?
 
-**The Philosopher → The Visionary.** What if the shortcut turns out to be the obvious best choice? You'd be asking people to experiment with a decision the map already made for them.
+**The Devil's Advocate → The Visionary.** A queue near a photograph can look like a successful exhibit from across the room. What would tell you anyone engaged with it?
 
-**The Visionary.** Make both builds worth running. The cargo ship should deliver more per trip, and the nimble ship should take less time. Check that neither wins on both measures before bringing in testers.
+**The Visionary.** Count people who stop to talk about the object or offer a response to the exhibit question. Ask those participants how often they visit the museum. Count total traffic separately so we can see whether a busy branch actually helped.
 
-**The Philosopher.** That's a balance check. I also want to know whether players can see why a design did better. If the shortcut looks like a gap anybody can fit through, a player who gets wedged may blame the steering. Ask what they'd change and why before explaining the intended trade-off.
+**The Philosopher.** Some people will read and look closely without wanting to talk. Give them a written way to respond and collect a small sample of feedback so the measure leaves room for quieter visitors.
 
-#### What would another month buy?
+#### What would six pop-ups cost in staff time?
 
-**The Strategist → The Devil's Advocate.** What would you put on the second map that justifies a month of work? An extra harbor still leaves the same building decisions.
+**The Strategist → The Visionary.** Twelve evenings use one setup. Six branch events need transport and coordination each time. How much museum time will each encounter cost?
 
-**The Devil's Advocate.** Give players a reason to retire a ship that already worked. If the first delivery rewards capacity, a second one could demand tight turns. I'd consider adding that to the existing map. My objection is that we're betting on repeat building before we've seen a player face a new problem.
+**The Visionary.** Use the same portable display at all three branches and change the question or photograph where it helps. I'd ask each branch to name a staff contact and confirm space before we commit.
 
-**The Strategist.** That changes the scope. If one extra delivery can expose the gap, I'd spend an evening prototyping it before committing a month to a second map.
+**The Devil's Advocate.** The space commitment is only half the answer. Ask museum staff to time a practice pack, setup, and teardown. If every event consumes a full staff day, estimate how much engagement each branch would need to justify that time.
 
 ### Rebuttals
 
-**The Strategist** drops the immediate public launch after the Scientist separates onboarding from public interest. Next week's test should show where an uncoached player gets stuck before the team tries to measure voluntary return.
+**The Strategist** withdraws the assumption that later hours will reach new people on their own. They still vote for evenings if neighborhood groups can point to people who want to visit and name work hours as the barrier. The shorter setup makes that option easier to sustain once there is evidence of demand.
 
-**The Visionary** accepts the Philosopher's point that a balanced route can still be hard to read. Testers should explain what their hull did for them and show what they'd change before anyone explains the route.
+**The Visionary** accepts the Devil's Advocate's staffing check and the Philosopher's case for written feedback. The pop-ups now depend on a timed trial setup and a branch layout where people can linger.
 
-**The Devil's Advocate** drops the demand for a bigger map but keeps a higher bar for public release. They want newcomers to carry something they learned on the first trip into a second problem. The Scientist would open a limited beta sooner if players already choose to rebuild on the current route.
+**The Scientist** backs the pop-ups if the branches confirm space and staffing. Regular library visitors can tell the museum something it cannot learn from its own visitor book. The sample still won't represent residents who use neither institution.
 
 ### Final Vote
 
 | Advisor | Vote | Reason |
 | --- | --- | --- |
-| The Philosopher | Playtest next week, then open a limited beta if it passes | Players should be able to explain a consequence of their design. |
-| The Strategist | Playtest next week, then open a limited beta if it passes | A short test can show where development time would matter most. |
-| The Scientist | Playtest next week, then open a limited beta if it passes | Observe first-time players before using public behavior to judge the game. |
-| The Visionary | Playtest next week, then open a limited beta if it passes | The existing map can reveal a design trade-off if both builds work. |
-| The Devil's Advocate | Delay public access until a second challenge is tested | A single route may reward one build and give players little reason to return. |
+| The Philosopher | Library pop-ups | People can encounter the collection without planning another trip. |
+| The Strategist | Thursday evenings | A verified scheduling barrier would justify twelve openings with one setup. |
+| The Scientist | Library pop-ups | Branches offer a way to hear from people the museum seldom sees. |
+| The Visionary | Library pop-ups | A portable, locally relevant exhibit can give people a reason to stop. |
+| The Devil's Advocate | Thursday evenings | Repeated use of the existing exhibit avoids transport and setup at each event. |
 
-**Tally — 4 for a playtest with a conditional public beta, 1 for testing a second challenge before public access.**
+**Tally — 3 for library pop-ups, 2 for Thursday evenings.**
 
 ### Council Verdict
 
-Keep next week as the playtest date. Invite a few people who have never seen the build, ask them to complete one delivery, and watch without coaching. Record where they get stuck and whether they start modifying their ship on their own.
+Choose the library pop-ups if the branches can provide room for visitors to pause and the practice setup fits the staffing budget. Ask a few people at each branch what has kept them from visiting the museum. If those conversations point mostly to hours and neighborhood groups can show concrete interest in coming after work, choose Thursday evenings.
 
-If several players hit the same blocker, fix it and repeat the test. If they finish but see no reason to rebuild, prototype a second delivery on the same map with a different ship requirement. If newcomers can complete the loop and make a deliberate redesign for another run, open a limited public beta to see whether people who discover the game on their own also stick with it. The playtest can expose design problems, while the Devil's Advocate's concern about return visits stays open.
+Before the first event, agree on how much staff time the museum can afford per encounter with someone who rarely visits. Track conversations or written responses, ask those participants how often they visit the museum, and log staff hours including travel and setup. Review the first two events before repeating the same layout. The evening option remains attractive if the logistics of the pop-ups leave too little time to engage with visitors.
 
-*What would make a player change a ship that already got them safely back to port?*
+*Of travel, opening hours, and interest in the exhibits, which barrier does the grant most need to address?*
 
 ## Another prompt to try
 
-> /council Our volunteer repair café has enough money for either a second monthly event or one shared toolkit that would speed up repairs. We already turn people away, and only four volunteers can diagnose electronics. Which should we fund, and what would prove we made the right choice?
+> /council A small bakery gets a reliable offer to supply two cafés every morning. Filling it would mean dropping Saturday custom cake orders, which bring in more per order but take longer to plan. The owner wants steadier weeks and has room for only one line of work. Which should the bakery keep, and what should the owner measure before committing?
 
 ## Standalone skill for ChatGPT
 
